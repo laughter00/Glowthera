@@ -466,4 +466,63 @@ document.getElementById("skinForm").addEventListener("submit", function(event) {
 </script>
 
 </body>
+  <!-- GLOWTHERA BEAUTY ASSISTANT -->
+<section id="beauty-assistant" style="padding:60px 20px;background:#f8f3ef;text-align:center;">
+  <div style="max-width:700px;margin:auto;">
+    <h2 style="color:#542c46;font-size:30px;">Your Glowthera Beauty Assistant</h2>
+    <p style="color:#665b60;">Ask questions. Understand your skin. Make better beauty choices.</p>
+
+    <div id="glow-chat" style="background:white;border-radius:15px;padding:20px;margin-top:25px;text-align:left;box-shadow:0 4px 15px #00000012;">
+      <div id="glow-messages" style="min-height:150px;max-height:300px;overflow-y:auto;padding:10px;">
+        <p><strong>Glowthera:</strong> Hello! I'm your beauty guide. How can I help you today?</p>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <input id="glow-question" type="text" placeholder="Ask me about skincare, haircare or beauty..."
+        style="flex:1;min-width:180px;padding:13px;border:1px solid #ddd;border-radius:8px;">
+        <button onclick="askGlowthera()" style="padding:13px 20px;background:#542c46;color:white;border:0;border-radius:8px;cursor:pointer;">
+          Ask
+        </button>
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:#777;margin-top:15px;">
+      Glowthera provides general beauty education, not medical diagnosis or treatment.
+    </p>
+  </div>
+</section>
+
+<script>
+function askGlowthera() {
+  const input = document.getElementById("glow-question");
+  const messages = document.getElementById("glow-messages");
+  const question = input.value.trim().toLowerCase();
+
+  if (!question) return;
+
+  messages.innerHTML += "<p><strong>You:</strong> " + input.value.replace(/</g, "&lt;").replace(/>/g, "&gt;") + "</p>";
+
+  let answer = "That's a good question! Try to choose gentle products suited to your skin or hair type. Introduce new products gradually and stop using anything that causes irritation.";
+
+  if (question.includes("dry skin") || question.includes("dryness")) {
+    answer = "For dry skin, look for moisturising ingredients such as glycerin, ceramides and hyaluronic acid. Use a gentle cleanser and moisturise regularly.";
+  } else if (question.includes("oily skin")) {
+    answer = "For oily skin, consider lightweight, non-comedogenic moisturisers and gentle cleansing. Avoid harsh scrubbing, which can irritate your skin.";
+  } else if (question.includes("acne") || question.includes("pimple")) {
+    answer = "For acne-prone skin, gentle cleansing and non-comedogenic products can help. Avoid picking spots. Persistent or painful acne should be assessed by a dermatologist.";
+  } else if (question.includes("dark spot") || question.includes("hyperpigmentation")) {
+    answer = "For dark spots, daily broad-spectrum SPF 30 or higher is important. Ingredients such as niacinamide may help improve uneven skin tone over time.";
+  } else if (question.includes("hair")) {
+    answer = "Healthy hair care starts with gentle cleansing, conditioning and reducing excessive heat or harsh chemical treatments. Choose products suited to your hair type.";
+  } else if (question.includes("sunscreen") || question.includes("spf")) {
+    answer = "Choose a broad-spectrum SPF 30 or higher. Apply generously and reapply about every two hours when outdoors, and after swimming or sweating.";
+  } else if (question.includes("ingredient") || question.includes("moisturiser")) {
+    answer = "Useful moisturising ingredients include glycerin, ceramides, hyaluronic acid and petrolatum. The best choice depends on your skin type and needs.";
+  }
+
+  messages.innerHTML += "<p><strong>Glowthera:</strong> " + answer + "</p>";
+  messages.scrollTop = messages.scrollHeight;
+  input.value = "";
+}
+</script>
 </html>
