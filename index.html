@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Glowthera helps you understand your skin, discover beauty ingredients and build better self-care routines.">
+<title>Glowthera | Understand Your Skin. Discover Your Glow.</title>
+
+<style>
+:root {
+  --cream: #faf6f0;
+  --white: #ffffff;
+  --plum: #48283e;
+  --gold: #bd9862;
+  --text: #332c30;
+  --muted: #777078;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: white;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--plum);
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.button {
+  display: inline-block;
+  background: var(--plum);
+  color: white;
+  padding: 13px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.hero {
+  padding: 95px 8%;
+  background: linear-gradient(120deg, #f5e9df, #f9f5ef);
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 6vw, 65px);
+  color: var(--plum);
+  line-height: 1.15;
+  max-width: 850px;
+  margin: auto;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 22px auto;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+section {
+  padding: 75px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  color: var(--plum);
+  font-size: 36px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #eee4da;
+}
+
+.card .icon {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--plum);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.assessment {
+  background: white;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background: var(--cream);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+label {
+  display: block;
+  margin: 17px 0 7px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+}
+
+#assessmentResult {
+  margin-top: 20px;
+  padding: 18px;
+  background: white;
+  border-radius: 8px;
+  display: none;
+}
+
+.assistant {
+  background: var(--plum);
+  color: white;
+  text-align: center;
+}
+
+.assistant h2 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+}
+
+.assistant p {
+  margin: 15px auto;
+  max-width: 650px;
+  color: #eee0e9;
+}
+
+.assistant .button {
+  background: var(--gold);
+  color: #281b23;
+  margin-top: 12px;
+}
+
+.lesson {
+  background: white;
+}
+
+footer {
+  background: #291b26;
+  color: white;
+  text-align: center;
+  padding: 35px 8%;
+}
+
+footer p {
+  color: #d6cbd3;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+@media(max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 65px 7%;
+  }
+
+  section {
+    padding: 55px 7%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Glow<span>thera</span></div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#discover">Discover</a>
+    <a href="#assessment">Skin Assessment</a>
+    <a href="#academy">Academy</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <h1>Understand Your Skin. Discover Your Glow.</h1>
+
+  <p>
+    Your personal beauty education companion.
+    Learn about your skin, understand ingredients
+    and build self-care routines that work for you.
+  </p>
+
+  <a href="#assessment" class="button">Start Your Beauty Journey</a>
+</section>
+
+<section id="discover">
+  <div class="section-heading">
+    <h2>Discover Your Beauty</h2>
+    <p>Knowledge is the beginning of better self-care.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">✨</div>
+      <h3>Skincare</h3>
+      <p>Understand your skin type, ingredients,
+      cleansing, moisturising and sun protection.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌿</div>
+      <h3>Haircare</h3>
+      <p>Learn about hair types, scalp care,
+      healthy hair habits and haircare products.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🧴</div>
+      <h3>Body Care</h3>
+      <p>Explore body moisturising, personal hygiene
+      and everyday body-care practices.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💎</div>
+      <h3>Beauty Ingredients</h3>
+      <p>Discover what popular beauty ingredients
+      do and how they are commonly used.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="assessment" id="assessment">
+
+  <div class="section-heading">
+    <h2>Let's Understand Your Skin</h2>
+    <p>Start with a simple educational skin assessment.</p>
+  </div>
+
+  <form id="skinForm">
+
+    <label for="skinType">How would you describe your skin?</label>
+    <select id="skinType" required>
+      <option value="">Choose your skin type</option>
+      <option value="Oily">Oily</option>
+      <option value="Dry">Dry</option>
+      <option value="Combination">Combination</option>
+      <option value="Normal">Normal</option>
+      <option value="Unsure">I'm not sure</option>
+    </select>
+
+    <label for="concern">What is your main concern?</label>
+    <select id="concern" required>
+      <option value="">Choose your concern</option>
+      <option value="Acne">Acne and breakouts</option>
+      <option value="Dark spots">Dark spots</option>
+      <option value="Dryness">Dryness</option>
+      <option value="Oiliness">Excess oil</option>
+      <option value="Sensitivity">Sensitive skin</option>
+      <option value="General care">General skin maintenance</option>
+    </select>
+
+    <label for="budget">What is your product budget?</label>
+    <select id="budget" required>
+      <option value="">Choose your budget</option>
+      <option value="Low">Affordable</option>
+      <option value="Medium">Moderate</option>
+      <option value="High">Premium</option>
+    </select>
+
+    <br><br>
+
+    <button class="button" type="submit">View My Guidance</button>
+
+    <div id="assessmentResult"></div>
+
+  </form>
+</section>
+
+<section class="assistant">
+
+  <h2>Meet Your Beauty Guide</h2>
+
+  <p>
+    Imagine having a knowledgeable beauty companion
+    to help you understand skincare, ingredients,
+    haircare and personal care.
+  </p>
+
+  <p>
+    Glowthera Beauty Guide is part of our vision
+    for more accessible and personalised beauty education.
+  </p>
+
+  <a href="#academy" class="button">Explore Beauty Education</a>
+
+</section>
+
+<section id="academy" class="lesson">
+
+  <div class="section-heading">
+    <h2>Glowthera Beauty Academy</h2>
+    <p>Learn. Understand. Build better habits.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">📖</div>
+      <h3>Understanding Skin Types</h3>
+      <p>Learn the differences between oily,
+      dry, combination and normal skin.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">☀️</div>
+      <h3>Understanding Sunscreen</h3>
+      <p>Learn about SPF, broad-spectrum protection
+      and everyday sun protection.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🧪</div>
+      <h3>Understanding Ingredients</h3>
+      <p>Explore niacinamide, vitamin C,
+      hyaluronic acid and other ingredients.</p>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="logo" style="color:white">Glow<span>thera</span></div>
+
+  <p>Understand Your Skin. Discover Your Glow.</p>
+
+  <p>Beauty education. Personal care. Confidence.</p>
+
+  <p>
+    Glowthera provides educational information,
+    not medical diagnosis or treatment.
+    Consult a qualified healthcare professional
+    about persistent or serious skin concerns.
+  </p>
+
+  <p>© 2026 Glowthera. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("skinForm").addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const skin = document.getElementById("skinType").value;
+  const concern = document.getElementById("concern").value;
+  const budget = document.getElementById("budget").value;
+
+  let advice = "";
+
+  if (skin === "Oily") {
+    advice += "Your selected skin type is oily. Learn about gentle cleansing and lightweight, non-comedogenic moisturisers. ";
+  } else if (skin === "Dry") {
+    advice += "Your selected skin type is dry. Learn about gentle cleansing and moisturisers that support the skin barrier. ";
+  } else if (skin === "Combination") {
+    advice += "Your selected skin type is combination. Different areas of your face may need different levels of moisture. ";
+  } else if (skin === "Normal") {
+    advice += "You selected normal skin. Focus on gentle cleansing, moisturising and daily sun protection. ";
+  } else {
+    advice += "You are unsure about your skin type. That's okay. Learning how your skin behaves throughout the day can help. ";
+  }
+
+  advice += "Your main concern is " + concern + ". ";
+  advice += "Your selected budget is " + budget + ". ";
+
+  advice += "A simple starting point is gentle cleansing, moisturising and broad-spectrum SPF 30 or higher during the day. Introduce new products gradually and stop using anything that causes irritation.";
+
+  const result = document.getElementById("assessmentResult");
+
+  result.style.display = "block";
+
+  result.innerHTML =
+    "<h3>Your Starting Guidance</h3><p>" + advice + "</p>";
+
+});
+</script>
+
+</body>
+</html>
